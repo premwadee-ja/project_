@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แพลตฟอร์มดิจิทัลเพื่อส่งเสริมการท่องเที่ยวภาคเหนือตอนล่างของไทย</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anakotmai:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Anakotmai', sans-serif;
+            font-style: italic;
+        }
+
+        /* Hero Image Section with Sliding Background */
+        .hero-image {
+            position: relative;
+            width: 100vw;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease-in-out;
+      
+        }
+
+        /* Text Box */
+        .hero-text {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(254, 250, 250, 0.575);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .hero-text h1, .hero-text p {
+            margin: 0;
+            padding: 5px 0;
+        }
+
+        .nav-container {
+            background-color: #5c7854;
+            padding: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: rgb(255, 255, 255);
+            font-size: 1.2em;
+            line-height: 1.4;
+            text-decoration: underline; /* เพิ่มเส้นใต้ */
+            text-decoration-color: #ffffff; /* เปลี่ยนสีเส้นใต้เป็นสีเหลือง */
+        }
+
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 35px;
+        }
+
+        nav ul li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 1.3em;
+        }
+
+        /* Search Box */
+        .search-container {
+            position: relative;
+            top: -20px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            max-width: 700px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .search-container input[type="text"] {
+            width: 85%;
+            padding: 18px;
+            font-size: 1.2em;
+            border-radius: 20px;
+            border: 2px solid #b6b6b6;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-container input[type="text"]:focus {
+            border-color: #ffcc00;
+            box-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
+        }
+
+        .search-container button {
+            padding: 18px 30px;
+            font-size: 1.2em;
+            border: none;
+            background-color: #e7d3c0;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .search-container button:hover {
+            background-color: #ffcc00;
+            box-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
+        }
+
+        /* Image Overlay */
+        .image-overlay {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .image-overlay .frame {
+            position: relative;
+            border: 5px solid white;
+            padding: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 180px;
+            height: 220px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .image-overlay img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .prev { left: 5px; }
+        .next { right: 5px; }
+   
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="navbar-brand">
+                <div class="logo">แพลตฟอร์มดิจิทัลเพื่อส่งเสริมการท่องเที่ยวภาคเหนือตอนล่างของไทย</div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="home.html">หน้าแรก</a></li>
+                    <li><a href="About.html">ข้อมูลจังหวัด</a></li>
+                    <li><a href="infor.html">แหล่งท่องเที่ยว</a></li>
+                    <li><a href="infor.html">คาเฟ่/ร้านอาหาร</a></li>
+                    <li><a href="in.html">แหล่งร้านฝากขาย</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Image Section -->
+    <div class="hero-image" id="hero">
+        <div class="hero-text">
+            <h1>ส่งเสริมการท่องเที่ยวภาคเหนือของประเทศไทย</h1>
+         <a href="#">Explore →</a>
+        </div>
+    </div>
+
+    <!-- Search Box Section -->
+    <div class="search-container">
+        <input type="text" placeholder="ค้นหาจังหวัดหรือสถานที่...">
+        <button type="button">ค้นหา</button>
+    </div>
+
+    <!-- Image Overlay Section -->
+    <div class="image-overlay">
+        <div class="frame">
+            <button class="arrow prev" onclick="changeImage(this.parentElement, ['3.jpg', '4.jpg'])">❮</button>
+            <img src="1.jpg" alt="Temple">
+            <button class="arrow next" onclick="changeImage(this.parentElement, ['1.jpg', '2.jpg'])">❯</button>
+        </div>
+        <div class="frame">
+            <button class="arrow prev" onclick="changeImage(this.parentElement, ['3.jpg', '3.jpg'])">❮</button>
+            <img src="2.jpg" alt="Pagoda">
+            <button class="arrow next" onclick="changeImage(this.parentElement, ['1.jpg', '2.jpg'])">❯</button>
+        </div>
+    </div>
+
+    <script>
+        // Array of image URLs
+        const images = [
+            'test1.png',
+            'test2.png',
+            'test3.png',
+            'test4.png',
+            'test5.png',
+            'test6.png',
+            'test7.png',
+            'test8.png',
+        ];
+    
+        let currentIndex = 0;
+        const heroSection = document.getElementById('hero');
+    
+        // ฟังก์ชันเปลี่ยนพื้นหลัง
+        function changeBackground() {
+            heroSection.style.backgroundImage = `url('${images[currentIndex]}')`; // ใช้ backticks เพื่อเชื่อมค่า
+            currentIndex = (currentIndex + 1) % images.length; // หมุนไปที่ภาพถัดไป
+        }
+    
+        // เริ่มต้นพื้นหลัง
+        changeBackground();
+    
+        // ตั้งเวลาให้เปลี่ยนพื้นหลังทุก 5 วินาที
+        setInterval(changeBackground, 5000);
+    </script>
+
+</body>
+</html>
